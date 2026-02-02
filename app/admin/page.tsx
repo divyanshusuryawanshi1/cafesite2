@@ -69,7 +69,11 @@ export default function AdminPage() {
     useEffect(() => {
         async function init() {
             const { data: { session } } = await supabase.auth.getSession();
-            setUser(session?.user || { email: 'admin@saffron.com' });
+            if (!session) {
+                router.push('/login');
+                return;
+            }
+            setUser(session.user);
             await fetchData();
             setLoading(false);
         }

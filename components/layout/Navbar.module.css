@@ -142,3 +142,13 @@
         display: none;
     }
 }
+
+.closeMenuBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-heading);
+    cursor: pointer;
+}

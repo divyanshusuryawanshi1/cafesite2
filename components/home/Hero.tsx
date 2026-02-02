@@ -36,7 +36,6 @@ export default function Hero() {
                     Where heritage meets modern luxury. Experience the finest Indian fusion cuisine in a setting designed for the soul.
                 </p>
                 <div className={styles.ctaWrapper}>
-                    <a href="#book" className={styles.primaryBtn}>Reserve a Table</a>
                     <a href="#menu" className={styles.secondaryBtn}>Explore Menu</a>
                 </div>
             </div>

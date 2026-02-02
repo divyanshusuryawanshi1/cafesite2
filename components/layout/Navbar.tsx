@@ -34,9 +34,6 @@ export default function Navbar() {
                 </ul>
 
                 <div className={styles.actions}>
-                    <button className={styles.cartBtn} aria-label="Cart">
-                        <ShoppingCart size={24} />
-                    </button>
                     <button
                         className={styles.mobileToggle}
                         onClick={() => setIsOpen(!isOpen)}
@@ -49,6 +46,12 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ''}`}>
+                <button
+                    className={styles.closeMenuBtn}
+                    onClick={() => setIsOpen(false)}
+                >
+                    <X size={32} />
+                </button>
                 <ul>
                     <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
                     <li><Link href="#story" onClick={() => setIsOpen(false)}>Our Story</Link></li>
