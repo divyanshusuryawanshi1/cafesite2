@@ -1,0 +1,94 @@
+.story {
+    padding: var(--gap-xl) var(--gap-md);
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xl);
+}
+
+.colText {
+    flex: 1;
+    padding-right: var(--gap-lg);
+}
+
+.eyebrow {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--gap-md);
+    font-weight: 600;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-bottom: var(--gap-md);
+    color: var(--color-heading);
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin-bottom: var(--gap-md);
+}
+
+.signature {
+    margin-top: var(--gap-lg);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: var(--gap-md);
+}
+
+.sigName {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-heading);
+}
+
+.sigTitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-deep-green);
+    opacity: 0.7;
+}
+
+.colImage {
+    flex: 1;
+    position: relative;
+}
+
+.imgWrapperMain {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg) 0 var(--radius-lg) 0;
+    box-shadow: var(--shadow-md);
+}
+
+.mainImg {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.mainImg:hover {
+    transform: scale(1.03);
+}
+
+@media (min-width: 992px) {
+    .container {
+        flex-direction: row;
+    }
+}

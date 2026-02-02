@@ -1,0 +1,57 @@
+:root {
+  /* Earthy & Premium Palette */
+  --color-bg: #FDFBF7;        /* Soft warm white/cream */
+  --color-bg-alt: #F3EFE7;    /* Slightly darker beige for sections */
+  --color-text: #2C241E;      /* Deep Brown-Black for reading */
+  --color-heading: #4A3B32;   /* Warm brown for headings */
+  --color-accent: #C17F59;    /* Terracotta/Clay */
+  --color-gold: #D4AF37;      /* Muted Gold for luxury accents */
+  --color-deep-green: #2F3E30;/* Forest green for nature contrast */
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Spacing */
+  --gap-sm: 0.5rem;
+  --gap-md: 1rem;
+  --gap-lg: 2rem;
+  --gap-xl: 4rem;
+  
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

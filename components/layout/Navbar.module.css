@@ -1,0 +1,144 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    /* Contrast fix: White text */
+}
+
+.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-sm);
+    color: var(--color-heading);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--gap-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.desktopMenu {
+    display: none;
+    list-style: none;
+    gap: var(--gap-lg);
+}
+
+.desktopMenu a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.desktopMenu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s;
+}
+
+.desktopMenu a:hover {
+    color: var(--color-accent);
+}
+
+.desktopMenu a:hover::after {
+    width: 100%;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+}
+
+.cartBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.cartBtn:hover {
+    color: var(--color-accent);
+}
+
+.mobileToggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.mobileMenu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobileMenu li {
+    margin: var(--gap-md) 0;
+}
+
+.mobileMenu a {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-heading);
+}
+
+@media (min-width: 768px) {
+    .desktopMenu {
+        display: flex;
+    }
+
+    .mobileToggle {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+}
